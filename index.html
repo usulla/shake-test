@@ -27,8 +27,8 @@
             var x = event.accelerationIncludingGravity.x;
             var y = event.accelerationIncludingGravity.y;
             var z = event.accelerationIncludingGravity.z;
-            alert(x,y,z)
-            // Do something awesome.
+            
+            document.body.innerHTML = `x,y,z:${x},${y},${z}`
         }
 
         window.addEventListener("devicemotion", handleMotionEvent, true);
