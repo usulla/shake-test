@@ -1,0 +1,22 @@
+<script>
+    console.log(111)
+if (window.DeviceOrientationEvent) {
+    alert('DeviceOrientationEvent support!')
+    window.addEventListener("deviceorientation", function (event) {
+        alert('is deviceorientation')
+        // alpha: rotation around z-axis
+        var rotateDegrees = event.alpha;
+        // gamma: left to right
+        var leftToRight = event.gamma;
+        // beta: front back motion
+        var frontToBack = event.beta;
+
+        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    }, false);
+}
+
+var handleOrientationEvent = function (frontToBack, leftToRight, rotateDegrees) {
+    console.log('jjj')
+    alert(`rotation:${frontToBack, leftToRight, rotateDegrees}`)
+};
+</script> 
